@@ -56,20 +56,8 @@ const questions = [
 
 // function to write README file
 function generateReadMe(data) {
-    if (data.license == "GPL") {
-        data.licenseShield == "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-    } else if (data.license == "Apache") {
-        data.licenseShield == "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-    } else if (data.license == "MIT") {
-        data.licenseShield == "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-    } else if (data.license == "BSD") {
-        data.licenseShield == "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
-    } else if (data.license == "None") {
-        data.licenseShield = ""
-    }
-
     return `# ${data.title}
-    ${data.licenseShield}
+    License: ${data.license}
 
     ${data.description}
 
